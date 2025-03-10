@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Dingding-Youth">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/study-android.zip!/" />
+      <root url="jar://$PROJECT_DIR$/student-android.zip!/" />
+      <root url="jar://$PROJECT_DIR$/student-pad.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
