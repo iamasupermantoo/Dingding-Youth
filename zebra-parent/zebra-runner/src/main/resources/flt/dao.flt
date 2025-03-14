@@ -1,0 +1,25 @@
+package ${package}.dao;
+
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import com.dorado.framework.crud.dao.impl.AbstractDAO;
+import ${package}.model.${model};
+import com.youshi.zebra.core.constants.db.ZebraDB;
+
+/**
+ * 
+ * @author wangsch
+ * @date ${date}
+ */
+@Repository
+public class ${dao} extends AbstractDAO<Integer, ${model}>{
+	private static final String TABLE_NAME = "${table}";
+	
+	private static final RowMapper<${model}> MAPPER = (rs, num)-> 
+		new ${model}(rs.getInt("id"), rs.getString("data"), rs.getLong("create_time"), rs.getInt("status"));
+	
+	protected ${dao}() {
+		super(ZebraDB.${zkdb}.getZKName(), TABLE_NAME, MAPPER);
+	}
+}

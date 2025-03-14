@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>zebra-event</artifactId>
+        <groupId>com.youshi.zebra</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>zebra-event-server</artifactId>
+    <name>zebra-event-server</name>
+    <packaging>jar</packaging>
+	<!-- 开发人员说明 -->
+	<developers>
+		<developer>
+			<name>wangsch</name>
+			<email>wangsch@youshi-inc.com</email>
+		</developer>
+	</developers>
+	<dependencies>
+		<!-- 全局排除开始 -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 全局排除结束 -->
+
+		<dependency>
+			<groupId>com.github.phantomthief</groupId>
+			<artifactId>jedis-simple-queue</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.youshi.zebra</groupId>
+			<artifactId>zebra-component</artifactId>
+		</dependency>
+		 
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+		</dependency>
+
+		<dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+        </dependency>
+		 
+
+	</dependencies>
+</project>

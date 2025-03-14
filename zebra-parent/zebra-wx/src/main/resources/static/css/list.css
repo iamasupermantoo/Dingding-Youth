@@ -1,0 +1,66 @@
+html,
+body {
+  font-size: 13.33333vw;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+  background: #eeeeee;
+}
+.wrapper {
+  font-size: 0.24rem;
+  background: #eeeeee;
+  padding-top: 0.3rem;
+}
+.wrapper .row .column {
+  float: left;
+}
+.wrapper .list {
+  border-top: 1px solid #ddd;
+}
+.wrapper .list .item {
+  border-bottom: 1px solid #ddd;
+  padding: 0.3rem;
+  background: #fff;
+  min-height: 2.22rem;
+  position: relative;
+}
+.wrapper .list .item .title {
+  font-size: 0.3rem;
+  color: #333333;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.wrapper .list .item .cover {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../img/test-cover.png);
+  float: right;
+  margin-left: 0.4rem;
+}
+.wrapper .list .item .meta {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0.3rem;
+}
+.wrapper .list .item .meta .view {
+  display: block;
+  background: url(../img/view-count.png) no-repeat left center;
+  background-size: 0.39rem auto;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  color: #a5a5a5;
+  font-size: 0.22rem;
+  padding-left: 0.46rem;
+}
+.wrapper .list .item .meta .comment {
+  display: block;
+  background: url(../img/comment-count.png) no-repeat left center;
+  background-size: auto 0.3rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  color: #a5a5a5;
+  font-size: 0.22rem;
+  padding-left: 0.44rem;
+  margin-left: 0.5rem;
+}

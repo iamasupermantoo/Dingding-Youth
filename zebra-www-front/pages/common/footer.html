@@ -1,0 +1,57 @@
+<div class="footer">
+	<div class="footer-info clearfix container">
+		<div class="des-us">
+			<div class="title"></div>
+			<ul class="info-nav">
+				<li>鼎鼎少年是联邦教育集团旗下在线教育产品</li>
+				<li>专注3-16岁青少英语学习</li>
+				<li>1对1北美外教实时直播课程</li>
+			</ul>
+		</div>
+		<div class="aboat-us">
+			<div class="title">
+				<ul class="clearfix">
+					<li><a href="/pages/front/about.html">· 关于DDLAD</a></li>
+					<li><a href="/pages/front/system.html">· 课程体系</a></li>
+					<li><a href="javascript:;">· 常见问题</a></li>
+					<li><a href="/pages/front/download.html">· 下载中心</a></li>
+					<li><a href="/pages/front/contact.html">· 联系我们</a></li>
+					<li>·Teacher Recruitment</li>
+				</ul>
+			</div>
+			<div class="info-holder">
+				<div class="sub-aboatus">
+					<p class="sub-title">关于我们</p>
+					<ul class="clearfix">
+						<li class="weixin"><a id="webchat" href="javascript:;"></a></li>
+						<li class="weibo"><a href="http://www.baidu.com"></a></li>
+						<li class="twitter"><a href="http://www.baidu.com"></a></li>
+						<li class="facebook"><a href="http://www.baidu.com"></a></li>
+					</ul>
+				</div>
+				<p  class="addr">公司地址：上海市经济自由贸易试验区111号111单元111座111室111</p>
+				<p>业务合作：021-82520995</p>
+				<div class="context">
+					<h3><span>联络我们</span><span class="tel">4008-666-666</span></h3>
+					<p>工作时间 (周一 至 周日 早8:00 至 20:00)</p>
+					<p>除法定节假日外 均正常开通</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="copy-info">沪ICP备 000000000号 上海鼎鼎少年国际科技教育有限责任公司</p>
+</div>
+<script src="/src/lib/jquery/jquery-3.2.1.js"></script>
+<script src="/src/lib/layer/layer/layer.js"></script>
+<script src="/src/js/constant.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var navIndex = $('body').attr('id');
+		if (navIndex) {
+			$('.nav-holder', '.header-index').find('li').eq(navIndex).find('a').addClass('active');
+		}
+		$('#webchat').on('click', function (e) {
+			COMMON_CONFIG.error('<img src="/src/img/front/common/webchat-code.jpg" width="400" height="400" />', 400, 400, true);
+		});
+	});
+</script>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style-admin.css">
+    	<link rel="stylesheet" href="/src/css/admin/list.css">
+    	<script type="text/juicer" id="discoveryListTpl">
+			{@each data as item,index}
+			    <div class="list common-holder clearfix">
+					<div class="left">
+						<div class="course-pic"><img src="@{item.image.pattern}" width="236" height="305" alt="课程图片"></div>
+						<p><button data-id="@{item.cmId}" class="common-btn appointment-class">立即约课</button></p>
+					</div>
+					<div class="right">
+						<p class="title">@{item.name}</p>
+						<p class="brief">
+							<span class="time">课 次：@{item.totalCnt}节课</span>
+							<span class="level">level：@{item.level}节课</span>
+						</p>
+						<div class="des">
+							<h3>课程简介：</h3>
+							<p>@{item.desc}</p>
+							<h3>购买须知：</h3>
+							<ul>
+								{@each item.subNotes as subItem,index}
+								<!--
+									{@helper numberPlus}
+									    function(number) {
+									        return parseInt(number) + 1;
+									    }
+									{@/helper}
+									-->
+								<li>(@{index|numberPlus})@{subItem}</li>
+								{@/each}
+							</ul>
+						</div>
+					</div>
+				</div>
+			{@/each}
+		</script>
+    </head>
+	<body>
+		<!--#include file="/pages/common/header-admin.html"-->
+		<div class="container page-holder" id="discoveryList"></div>
+		<!--#include file="/pages/common/footer-admin.html"-->
+	</body>
+</html>

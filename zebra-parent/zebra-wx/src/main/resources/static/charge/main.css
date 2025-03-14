@@ -1,0 +1,182 @@
+*{
+  margin:0;
+  padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding:0 25px;
+    background:#eeeef0;
+}
+.toptips{
+    width: 100%;
+    position: relative;
+}
+.toptips p{
+    border-top:1px solid #c9c9cb;
+    position: relative;
+    margin:42px 0 32px;
+}
+.toptips p span{
+    position: absolute;
+    left: 50%;
+    color: #b4b4b4;
+    font-size: 13px;
+    text-align: center;
+    padding:0 8px;
+    background:#eeeef0;
+    display: inline-block;
+    top:-7px;
+    transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    white-space: nowrap;
+}
+.cellnum{
+  width: 220px;
+  height: 40px;  
+  margin:0 auto;
+}
+.cellnum input{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    border:1px solid #c9c9cb;
+    border-radius: 6px;
+}
+.context{
+    width: 100%;
+    height: 100px;
+    border:1px solid #c9c9cb;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 16px;
+}
+.context.yel{
+  background: #fdf9ec;
+  border:1px solid #ffd138;
+}
+.context.yel .leftc{
+  border-right: 1px solid #ffd138;
+  font-weight: bold;
+}
+.context .leftc{
+  width: 30%;
+  text-align: center;
+  line-height: 100px;
+  border-right: 1px solid #c9c9cb;
+  box-sizing: border-box;
+  float: left;
+}
+.context .rightc{
+  width: 70%;
+  padding:0;
+  float: left;
+  position: relative;
+  height: 100%;
+}
+.context .rightc ul{
+  position: absolute;
+  left: 0;
+  top:50%;
+  transform: translate(0,-50%);
+  -moz-transform: translate(-50%);
+  -webkit-transform: translate(0,-50%);
+  padding-left: 20px;
+}
+.context .rightc ul li{
+  list-style: none;
+  font-size: 12px;
+  color: #838383;
+  line-height: 24px;
+}
+.context .rightc ul li.title{
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    font-size: 17px;
+    background:#ffd138;
+    border-radius: 5px;
+    margin: 28px 0;
+}
+.rectext{
+    font-size: 11px;
+    color: #858587;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 50px;
+}
+
+
+
+.hasget{
+    width: 100%;
+    text-align:left;
+    color: #b4b4b4;
+    font-size: 15px;
+    line-height: 1;
+    margin:40px 0 15px;
+}
+.time{
+    text-align: right;
+    width: 100%;
+    color: #ffd138;
+    font-size: 13px;
+}
+
+
+.imgshow{
+    width: 100%;
+    margin:120px auto 30px;
+    text-align: center;
+}
+.imgshow i{
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  background:#63b44d;
+  display: block;
+  position: relative;
+  margin:0 auto;
+}
+.imgshow i:after{
+  content: " ";
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  border:3px solid #fff;
+  border-width: 0 0 3px 3px;
+  transform: rotate(-45deg) translate(-50%,-50%);
+  -moz-transform: rotate(-45deg) translate(-50%,-50%);
+  -webkit-transform: rotate(-45deg) translate(-50%,-50%);
+  position: absolute;
+  left: 54%;
+  top: 25%;
+}
+.success{
+    text-align: center;
+    color: #656567;
+    font-size: 15px;
+}

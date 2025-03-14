@@ -1,0 +1,70 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style-admin.css">
+    	<link rel="stylesheet" href="/src/css/admin/index.css">
+    	<script type="text/juicer" id="couserTpl">
+    		{@if data.length === 0}
+    			<div class="empty-holder">我暂时没有课程</div>
+    		{@/if}
+			{@each data as item}
+			    <div class="course-holder">
+					<div class="course-title common-holder">
+						<p class="title"><img src="@{item.image.pattern}" width="102" height="130" alt=""></p>
+						<ul>
+							<li>课   程：@{item.name}</li>
+							<li>总课时：@{item.totalCnt} lesson</li>
+						</ul>
+					</div>
+					{@if item.lessons}
+						<ul class="course-list">
+							{@each item.lessons.list as lesson, index}
+							<li {@if index > 4}class="hidden"{@/if}>
+								<span class="name">@{lesson.label}</span><span>@{lesson.date}</span><span>@{lesson.time}</span>
+								{@if lesson.status === 1}
+								<span class="float-right absent">未上课</span>
+								{@else}
+								<span class="float-right">已上课</span>
+								{@/if}
+							</li>
+							{@/each}
+						</ul>
+						{@if item.lessons.list.length > 5}
+							<div class="more"><span>点击展开全部</span><i class="icon-plat-down-open-big"></i></div>
+						{@/if}
+					{@/if}
+				</div>
+			{@/each}
+		</script>
+		<script type="text/juicer" id="userTpl">
+			<p>
+				<a href="/pages/admin/userinfo.html">
+					<img src="@{portraitUrl}" width="86" height="86" alt="头像">
+				</a>
+			</p>
+			<div class="username">@{username}</div>
+		</script>
+    </head>
+	<body>
+		<!--#include file="/pages/common/header-admin.html"-->
+		<div class="container page-holder" id="courseHolder">
+			<div class="holder">
+				<div class="holder-l">
+					<div class="portrait" id="portrait"></div>
+					<div class="sub-nav">
+						<ul>
+							<li><span></span><a href="/pages/admin/index.html"><i class="listen"></i>我的课表</a></li>
+							<li class="active"><span></span><a href="/pages/admin/course.html"><i class="course"></i>我的课程</a></li>
+							<li><span></span><a href="/pages/admin/test.html"><i class="test"></i>课前评测</a></li>
+							<li><span></span><a href="/pages/admin/order.html"><i class="order"></i>我的订单</a></li>
+						</ul>
+					</div>
+				</div>	
+				<div class="holder-r" id="courseList"></div>
+			</div>
+		</div>
+		<!--#include file="/pages/common/footer-admin.html"-->
+	</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "code": 1
+  },
+  "data": [{
+    "cid": "123",
+    "cnt": 5,
+    "course": "幼儿园前1级",
+    "courseImage": {
+      "height": 0,
+      "id": "string",
+      "pattern": "/mock/mock-pic.png",
+      "width": 0
+    },
+    "lid": "string",
+    "status": 1,
+    "teacher": "Cathy smith",
+    "time": "10:00－11:00"
+  }]
+}

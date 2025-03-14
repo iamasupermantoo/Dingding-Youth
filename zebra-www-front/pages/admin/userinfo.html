@@ -1,0 +1,57 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style-admin.css">
+    	<link rel="stylesheet" href="/src/css/admin/form.css">
+    </head>
+	<body>
+		<!--#include file="/pages/common/header-admin.html"-->
+		<div class="container page-holder">
+			<p class="page-title"><span>账户信息</span></p>
+			<div class="common-form userinfo">
+				<div class="portrait">
+					<a href="javascript:;">
+						<img id="userImg" src="/src/img/admin/common/default.jpg" width="157" height="157" alt="头像">
+					</a>
+				</div>
+				<form class="userinfo-form" id="userInfoForm" action="">
+					<div id="successTip" class="form-list success-tip">
+						<span>用户信息更新成功</span>
+					</div>
+					<div class="form-list">
+						<label for="">姓名：</label>
+						<input type="text" name="name" disabled="" placeholder="请输入姓名" value="">
+					</div>
+					<div class="form-list">
+						<label for="">性别：</label>
+						<select disabled="" name="gender" value="">
+							<option value="0">男</option>
+							<option value="1">女</option>
+						</select>
+						<!-- <input type="text" name="gender" disabled="" placeholder="请输入性别" value=""> -->
+					</div>
+					<div class="form-list">
+						<label for="">年级：</label>
+						<input type="text" name="grade" disabled="" placeholder="请输入年级" value="">
+					</div>
+					<!-- <div class="form-list">
+						<label for="">省份</label>
+						<input type="text" name="province" disabled="" placeholder="请输入省份" value="">
+					</div>
+					<div class="form-list">
+						<label for="">区域</label>
+						<input type="text" name="region" disabled="" placeholder="请输入区域" value="">
+					</div> -->
+					<div class="form-list">
+						<label for="">签名：</label>
+						<input type="text" name="signature" disabled="" placeholder="请输入签名" value="">
+					</div>
+					<a href="javascript:;" id="saveUserInfo" data-state="default" class="save-btn">编辑</a>
+				</form>
+			</div>
+		</div>
+		<!--#include file="/pages/common/footer-admin.html"-->
+	</body>
+</html>

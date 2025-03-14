@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "code": 1,
+    "cost": 130,
+    "timestamp": 1499581704983,
+    "desc": "成功",
+    "hostname": "dorado-serv"
+  },
+  "data": {
+    "courses": {
+      "hasNext": false,
+      "list": [
+        {
+          "totalCnt": 12,
+          "image": {
+            "width": 230,
+            "height": 296,
+            "pattern": "http://img.z.ziduan.com/s4KWK5pBBIk9RzEFBVF2BQ.jpeg@{w}w_{h}h_75q",
+            "id": "s4KWK5pBBIk9RzEFBVF2BQ"
+          },
+          "cid": "Gz03fidJgV09RzEFBVF2BQ",
+          "name": "幼儿园 1级"
+        },
+        {
+          "totalCnt": 2,
+          "image": {
+            "width": 266,
+            "height": 343,
+            "pattern": "http://img.z.ziduan.com/fdhug64ABHw9RzEFBVF2BQ.png@{w}w_{h}h_75q",
+            "id": "fdhug64ABHw9RzEFBVF2BQ"
+          },
+          "cid": "FixIntjUEJM9RzEFBVF2BQ",
+          "name": "试听课程"
+        },
+        {
+          "totalCnt": 13,
+          "image": {
+            "width": 230,
+            "height": 296,
+            "pattern": "http://img.z.ziduan.com/Z2yy44KoQmY9RzEFBVF2BQ.jpeg@{w}w_{h}h_75q",
+            "id": "Z2yy44KoQmY9RzEFBVF2BQ"
+          },
+          "cid": "cVx6NrgY-I49RzEFBVF2BQ",
+          "name": "二年级 2"
+        },
+        {
+          "lessons": {
+            "hasNext": false,
+            "list": [
+              {
+                "time": "12:00 - 13:00",
+                "date": "2017-06-18",
+                "status": 2,
+                "videoUrl": "http://vi.z.ziduan.com/u9OhotMw7zI9RzEFBVF2BQ_y0ukN-WtzpM9RzEFBVF2BQ.mp4",
+                "cid": "u9OhotMw7zI9RzEFBVF2BQ",
+                "lid": "y0ukN-WtzpM9RzEFBVF2BQ",
+                "homeworkStatus": 1,
+                "studentReactionStatus": 1,
+                "teacherReactionStatus": 0,
+                "label": "Lesson-2"
+              },
+              {
+                "time": "11:00 - 12:00",
+                "date": "2017-06-16",
+                "status": 2,
+                "videoUrl": "http://vi.z.ziduan.com/u9OhotMw7zI9RzEFBVF2BQ_y_FJqPcOCHo9RzEFBVF2BQ.mp4",
+                "cid": "u9OhotMw7zI9RzEFBVF2BQ",
+                "lid": "y_FJqPcOCHo9RzEFBVF2BQ",
+                "homeworkStatus": 2,
+                "studentReactionStatus": 1,
+                "teacherReactionStatus": 0,
+                "label": "Lesson-1"
+              }
+            ]
+          },
+          "totalCnt": 13,
+          "image": {
+            "width": 230,
+            "height": 296,
+            "pattern": "http://img.z.ziduan.com/Z7xJ4mgshJg9RzEFBVF2BQ.jpeg@{w}w_{h}h_75q",
+            "id": "Z7xJ4mgshJg9RzEFBVF2BQ"
+          },
+          "cid": "u9OhotMw7zI9RzEFBVF2BQ",
+          "name": "四年级 2"
+        },
+        {
+          "lessons": {
+            "nextCursor": "don1XfnnytY9RzEFBVF2BQ",
+            "hasNext": true,
+            "list": [
+              {
+                "time": "16:30 - 17:00",
+                "date": "2017-07-07",
+                "status": 0,
+                "videoUrl": "http://vi.z.ziduan.com/FCNC-zHElhA9RzEFBVF2BQ_NEGYMOvrRfM9RzEFBVF2BQ.mp4",
+                "cid": "FCNC-zHElhA9RzEFBVF2BQ",
+                "lid": "NEGYMOvrRfM9RzEFBVF2BQ",
+                "homeworkStatus": 0,
+                "studentReactionStatus": 0,
+                "teacherReactionStatus": 0,
+                "label": "Lesson-12"
+              },
+              {
+                "time": "15:30 - 16:00",
+                "date": "2017-07-07",
+                "status": 2,
+                "videoUrl": "http://vi.z.ziduan.com/FCNC-zHElhA9RzEFBVF2BQ_WH-GRwnMVEA9RzEFBVF2BQ.mp4",
+                "cid": "FCNC-zHElhA9RzEFBVF2BQ",
+                "lid": "WH-GRwnMVEA9RzEFBVF2BQ",
+                "homeworkStatus": 0,
+                "studentReactionStatus": 0,
+                "teacherReactionStatus": 0,
+                "label": "Lesson-11"
+              },
+              {
+                "time": "18:00 - 20:20",
+                "date": "2017-06-22",
+                "status": 2,
+                "videoUrl": "http://vi.z.ziduan.com/FCNC-zHElhA9RzEFBVF2BQ_-yg5CPp1cg09RzEFBVF2BQ.mp4",
+                "cid": "FCNC-zHElhA9RzEFBVF2BQ",
+                "lid": "-yg5CPp1cg09RzEFBVF2BQ",
+                "homeworkStatus": 2,
+                "studentReactionStatus": 1,
+                "teacherReactionStatus": 0,
+                "label": "Lesson-11"
+              },
+              {
+                "time": "12:00 - 12:30",
+                "date": "2017-06-17",
+                "status": 2,
+                "videoUrl": "http://vi.z.ziduan.com/FCNC-zHElhA9RzEFBVF2BQ_F4Yxbvzj04o9RzEFBVF2BQ.mp4",
+                "cid": "FCNC-zHElhA9RzEFBVF2BQ",
+                "lid": "F4Yxbvzj04o9RzEFBVF2BQ",
+                "homeworkStatus": 1,
+                "studentReactionStatus": 1,
+                "teacherReactionStatus": 0,
+                "label": "Lesson-10"
+              },
+              {
+                "time": "14:30 - 15:30",
+                "date": "2017-06-16",
+                "status": 2,
+                "videoUrl": "http://vi.z.ziduan.com/FCNC-zHElhA9RzEFBVF2BQ_KlP3Upjx72I9RzEFBVF2BQ.mp4",
+                "cid": "FCNC-zHElhA9RzEFBVF2BQ",
+                "lid": "KlP3Upjx72I9RzEFBVF2BQ",
+                "homeworkStatus": 2,
+                "studentReactionStatus": 1,
+                "teacherReactionStatus": 1,
+                "label": "Lesson-10"
+              }
+            ]
+          },
+          "totalCnt": 24,
+          "image": {
+            "width": 230,
+            "height": 296,
+            "pattern": "http://img.z.ziduan.com/LLUgyVmqhtA9RzEFBVF2BQ.jpeg@{w}w_{h}h_75q",
+            "id": "LLUgyVmqhtA9RzEFBVF2BQ"
+          },
+          "cid": "FCNC-zHElhA9RzEFBVF2BQ",
+          "name": "乐高学习"
+        }
+      ]
+    }
+  }
+}

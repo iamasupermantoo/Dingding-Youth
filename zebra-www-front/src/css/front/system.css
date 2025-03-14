@@ -1,0 +1,479 @@
+body {
+	font-weight: normal;
+}
+.system-container {
+	margin: 0 20px;
+}
+.titles-container {
+	margin: 0 20px;
+	position: absolute;
+	top: 25%;
+}
+.system-holder .title-holder {
+	position: relative;
+	background: url(/src/img/front/system/bg.jpg) center center no-repeat;
+	background-size: auto 100%;
+}
+// .system-holder .title-holder img {
+// 	width: 100%;
+// }
+.title-holder {
+	position: relative;
+}
+.title-holder .titles {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+.titles-container h1 {
+	margin: 3% 0;
+	font-size: 42px;
+	color: #fff;
+}
+.titles-container h1 span {
+	color: #F7D433;
+}
+.titles-container .sub-title {
+	margin-top: 4%;
+	margin-bottom: 12%;
+	font-size: 18px;
+	color: #fff;
+}
+.titles-container .title-btns {
+	margin-bottom: 10%;
+}
+.titles .list li {
+	float: left;
+	width: 33%;
+	padding-bottom: 14px;
+}
+.titles .list .info {
+	padding-right: 80px;
+}
+.list-container {
+	margin: 0 20px;
+}
+@media (min-width: 1279px) {
+	.titles-container h1 {
+		font-size: 42px;
+	}
+	.titles-container .sub-title {
+		font-size: 18px;
+	}
+	.system-container,
+	.titles-container {
+		margin: 0 91px;
+	}
+	.titles .list-container {
+		margin: 0 0 0 91px;
+	}
+}
+@media (min-width: 1500px) {
+	.titles-container h1 {
+		font-size: 60px;
+	}
+	.titles-container .sub-title {
+		font-size: 24px;
+	}
+	.titles h1 {
+		font-size: 60px;
+	}
+	.system-container,
+	.titles-container {
+		margin: 0 91px;
+	}
+	.titles .list-container {
+		margin: 0 0 0 91px;
+	}
+}
+.list p {
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #fff;
+}
+.list .line {
+	margin-top: 0;
+	border-top: 1px solid #F7D433;
+	width: 130px;
+	opacity: 1;
+}
+.list .name {
+	margin-bottom: 13px;
+	font-size: 18px;
+	color: #F7D433;
+}
+.step1 {
+	
+	margin-bottom: 78px;
+}
+.step1 ul {
+	margin-top: 66px;
+}
+.step1 li {
+	float: left;
+	width: 37%;
+}
+.step1 li img {
+	
+	width: 100%;
+}
+.step1 h1 {
+	margin-top: 10px;
+	margin-bottom: 28px;
+	border-left: 6px solid #F5A623;
+	padding: 3px 19px 6px;
+	font-size: 38px;
+	color: #000;
+	font-weight: bold;
+}
+.step1 .ad-img {
+	position: relative;
+	float: right;
+	width: 50%;
+}
+.step1 .play-btn {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -35px;
+	margin-left: -35px;
+	width: 70px;
+	height: 70px;
+	background: url(/src/img/front/system/play-btn.png) no-repeat;
+	background-size: 100%;
+}
+.step1 .play-btn:hover {
+	opacity: 0.9;
+}
+.step1 p {
+	width: 100%;
+	font-size: 14px;
+	color: #4A4A4A;
+	line-height: 40px;
+}
+.step1 .form-common-btn {
+	display: inline-block;
+	margin-top: 14px;
+}
+.line {
+	margin-top: 78px;
+	border-top: 1px solid #9B9B9B;
+	opacity: 0.33;
+}
+.step2 .step2-info-holder li {
+	float: left;
+	width: 50%;
+}
+.step2-info-holder .img {
+	text-align: center;
+}
+.step2-info-holder img {
+	width: 70%;
+	margin-right: 20px;
+}
+.step2 h1 {
+	margin-bottom: 61px;
+	border-left: 6px solid #face00;
+	padding-left: 19px;
+	padding: 3px 19px 6px;
+	font-size: 38px;
+	color: #000;
+	font-weight: bold;
+}
+.step2 p {
+	font-size: 14px;
+	color: #4A4A4A;
+	line-height: 40px;
+}
+.step2 .step2-sub-list {
+	margin-top: 68px;
+}
+.step2 .step2-sub-list li {
+	float: none;
+	margin-bottom: 81px;
+	width: 100%;
+}
+.step2-sub-list h2 {
+	padding-left: 44px;
+	background: url(/src/img/front/about/star-full.png) 0 no-repeat;
+	margin-bottom: 9px;
+	height: 29px;
+	line-height: 29px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+} 
+.step2-sub-list p {
+	line-height: 28px;
+}
+.step3 .titles,
+.step4 .titles {
+	margin: 74px 0;
+}
+.step3 span,
+.step4 span {
+	display: block;
+	border-top: 7px solid #FACE00;
+	width: 50px;
+	margin: 0 auto;
+}
+.step3 h1,
+.step4 h1 {
+	margin: 7px 0 64px;
+	font-size: 38px;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	line-height: 68px;
+}
+.step3 p,
+.step4 p {
+	margin: 0 auto;
+	width: 50%;
+	font-size: 14px;
+	font-weight: lighter;
+	line-height: 28px;
+	color: #4A4A4A;
+	text-align: center;
+}
+.step3 .tab {
+	border: 1px solid rgba(155, 155, 155, 0.5);
+}
+.img-list {
+	margin-bottom: 88px;
+}
+.img-list p {
+	margin: 0;
+	width: 100%;
+}
+.img-list .list-container {
+	margin: 0 55px;
+	text-align: center;
+}
+.img-list .list-container img {
+	width: 100%;
+	margin-bottom: 29px;
+}
+.img-list .list-container h1 {
+	margin-bottom: 13px;
+	font-size: 24px;
+	line-height: 33px;
+	font-weight: bold;
+	color: #000;
+}
+.img-list .list-container h2 {
+	margin-bottom: 14px;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 33px;
+	color: #FACE00;
+}
+.img-list .list-container p {
+	font-size: 14px;
+	font-weight: lighter;
+	line-height: 28px;
+	color: #4A4A4A;
+}
+.lSSlideOuter .lSPager.lSpg > li a {
+	background-color: rgba(155, 155, 155, 0.5);
+}
+.lSSlideOuter .lSPager.lSpg > li.active a {
+	width: 74px;
+	background-color: #FACE00;
+}
+.lSSlideOuter .lSPager.lSpg > li:hover a {
+	background-color: #FACE00;
+}
+.tab {
+	position: relative;
+	padding-left: 280px;
+	padding-bottom: 120px;
+	min-height: 400px;
+}
+.tab .tab-title {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 280px;
+}
+.tab .tab-title li {
+	border-right: 1px solid rgba(151, 151, 151, 0.5);
+	border-bottom: 1px solid rgba(151, 151, 151, 0.5);
+}
+.tab .tab-title a {
+	display: block;
+	padding: 28px 28px 28px 94px;
+	background-image: url(/src/img/front/system/black-star.png);
+	background-repeat: no-repeat;
+	background-position: 40px center;
+	font-size: 20px;
+	color: #4A4A4A;
+}
+.tab .tab-title a.active {
+	background-image: url(/src/img/front/system/full-star.png);
+	color: #FACE00;
+}
+.tab-holder {
+	position: relative;
+}
+.tab .tab-holder li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	display: none;
+}
+.tab .tab-holder li.active {
+	display: inline-block;
+}
+.tab .tab-holder .tab-holder-list {
+	float: left;
+	width: 33.3%;
+}
+.tab-container {
+	margin: 0 20px;
+}
+.tab-holder .tab-holder-list img {
+	width: 100%;
+	margin: 10px 0;
+}
+.tab-holder .tab-holder-list .line {
+	margin-left: 0;
+	margin-top: 72px;
+	margin-bottom: 10px;
+	border-top: 4px solid #F7D433;
+	width: 70%;
+	opacity: 1;
+}
+.tab-holder .tab-holder-list h1 {
+	margin-bottom: 14px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #F7D433;
+	text-align: left;
+}
+.tab-holder .tab-holder-list p {
+	margin: 0;
+	width: auto;
+	font-size: 14px;
+	font-weight: lighter;
+	line-height: 30px;
+	color: #9B9B9B;
+	text-align: left;
+}
+@media (min-width: 1279px) {
+	.step1 h1 {
+		margin-top: 20px;
+		font-size: 38px;
+	}
+	.step1 .play-btn {
+		margin-top: -40px;
+		margin-left: -40px;
+		width:80px;
+		height: 80px;
+	}
+	.step2 h1 {
+		font-size: 38px;
+	}
+	.step3 h1,
+	.step4 h1 {
+		font-size: 38px;
+	}
+	.titles .list {
+		margin-top: 70px;
+	}
+	.list .line {
+		width: 200px;
+	}
+	.titles .list li {
+		padding-bottom: 34px;
+	}
+	.titles .list .info {
+		padding-right: 160px;
+	}
+	.tab {
+		padding-left: 300px;
+	}
+	.tab .tab-title {
+		width: 300px;
+	}
+	.tab .tab-title a {
+		padding: 30px 30px 30px 114px;
+		background-position: 50px center;
+	}
+	.tab-holder .tab-holder-list .line {
+		margin-left: 0;
+		margin-top: 92px;
+		margin-bottom: 10px;
+	}
+	.tab-holder .tab-holder-list h1 {
+		margin-bottom: 14px;
+	}
+	.tab-holder .tab-holder-list p {
+		line-height: 40px;
+		width: 90%;
+	}
+}
+@media (min-width: 1700px) {
+	.step1 h1 {
+		margin-top: 40px;
+		font-size: 48px;
+	}
+	.step1 .play-btn {
+		margin-top: -50px;
+		margin-left: -50px;
+		width: 100px;
+		height: 100px;
+	}
+	.step2 h1 {
+		font-size: 48px;
+	}
+	.step3 h1,
+	.step4 h1 {
+		font-size: 48px;
+	}
+	.step1 .form-common-btn {
+		margin-top: 106px;
+	}
+	.titles .list {
+		margin-top: 190px;
+	}
+	.list .line {
+		width: 230px;
+	}
+	.titles .list li {
+		padding-bottom: 34px;
+	}
+	.step2-info-holder img {
+		width: 60%;
+		margin: 0 auto;
+		margin-bottom: 120px;
+	}
+	.step2 .step2-sub-list {
+		margin-top: 200px;
+	}
+	.tab {
+		padding-left: 412px;
+	}
+	.tab .tab-title {
+		width: 412px;
+	}
+	.tab .tab-title a {
+		padding: 52px 52px 52px 154px;
+		background-position: 80px center;
+	}
+	.tab-holder .tab-holder-list .line {
+		margin-left: 0;
+		margin-top: 142px;
+		margin-bottom: 10px;
+	}
+	.tab-holder .tab-holder-list h1 {
+		margin-bottom: 14px;
+	}
+	.tab-holder .tab-holder-list p {
+		line-height: 40px;
+		width: 90%;
+	}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>张巨河家庭教育提前约惠-优蛋</title>
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/anim.css">
+    <link rel="stylesheet" type="text/css" href="css/steps.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+    <script type="text/javascript" src="js/velocity.ui.js"></script>
+    <script type="text/javascript" src="js/preload.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    	var source = getUrlParam('s');
+    	if(source) {
+    		var href = $('#sub-a').attr('href');
+    		$('#sub-a').attr('href', href+'?s='+source);
+    	}
+    });
+    
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="img/part-1.jpg" alt=""/>
+        <img src="img/part-2.jpg" alt=""/>
+        <img src="img/part-3.jpg" alt=""/>
+        <img src="img/part-4.jpg" alt=""/>
+        <a id="sub-a" href="/menu/charge" class="subscribe"><span>订阅</span></a>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?fbca4cfd54300e12ae20f1001024d11c";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</body>
+</html>

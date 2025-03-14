@@ -1,0 +1,42 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style.css">
+    	<link rel="stylesheet" href="/src/css/front/login.css">
+    </head>
+	<body>
+		<!--#include file="/pages/common/header.html"-->
+		<div class="holder">
+			<img class="class-info" src="/src/img/front/login/bg.jpg" alt="">
+			<div class="holder-container">
+				<div class="holder-left">
+					<div class="btns">
+						<a href="/pages/front/download.html" class="downloads"></a>
+						<a href="/pages/front/download.html"><img src="/src/img/front/index/apple.png"></a>
+						<a href="/pages/front/download.html"><img src="/src/img/front/index/android.png"></a>
+						<a href="/pages/front/download.html"><img src="/src/img/front/index/windows.png"></a>
+					</div>
+				</div>
+				<div class="holder-right">
+					<form id="loginForm" action="/pages/admin/index.html">
+						<div class="error-tip"></div>
+						<div>
+							<label for="">帐号</label>
+							<input type="text" id="username" name="mobile" placeholder="请输入手机号">
+						</div>
+						<div>
+							<label for="">密码</label>
+							<input type="password" id="password" name="password" placeholder="请输入密码">
+						</div>
+						<button id="login" type="submit">登录</button>	
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/common/footer.html"-->
+		<script src="/src/js/front/login.js"></script>
+	</body>
+</html>

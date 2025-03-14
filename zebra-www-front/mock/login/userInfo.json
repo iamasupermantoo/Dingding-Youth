@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "code": 1,
+    "cost": 6,
+    "timestamp": 1499583977561,
+    "desc": "成功",
+    "hostname": "dorado-serv"
+  },
+  "data": {
+    "info": {
+      "grade": "Wwwwwwww旅途",
+      "gender": 0,
+      "province": "北京",
+      "headImage": {
+        "width": 1080,
+        "height": 1080,
+        "pattern": "http://img.z.ziduan.com/p6BtZ-qAXJ49RzEFBVF2BQ.jpeg@{w}w_{h}h_75q",
+        "id": "p6BtZ-qAXJ49RzEFBVF2BQ"
+      },
+      "name": "ddl123456",
+      "signature": "Wwwwwwww旅途快乐",
+      "region": "东城"
+    }
+  }
+}

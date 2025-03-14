@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="full-screen" content="yes"/>
+<meta name="browsermode" content="application"/>
+<meta name="x5-orientation" content="portrait"/>
+<meta name="x5-fullscreen" content="true"/>
+<meta name="x5-page-mode" content="app"/>
+<script type="text/javascript" src="/common/jquery.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<title>充值</title>
+<link rel="stylesheet" href="/charge/main.css" />
+<style>
+a {text-decoration: none}
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="content">
+		<div class="toptips"><p><span>选择要充值的优蛋账号(手机号)</span></p></div>
+		<div class="cellnum"><input placeholder="请输入手机号" type="tel" name="mobile" value=""></div>
+		<input type="hidden" name="nickname" th:value="${nickname }"/><br />
+		<input type="hidden" name="product" th:value="${product }"/><br />
+		<input type="hidden" name="source" th:value="${source }"/><br />
+		<input type="hidden" name="type" th:value="${type }"/><br />
+		<div class="context">
+			<div class="leftc">¥199/年</div>
+			<div class="rightc">
+				<ul>
+					<li class="title">父母大讲堂</li>
+					<li>专家姓名：张巨河</li>
+					<li>费用说明：家庭教育年费</li>
+				</ul>
+			</div>
+		</div>
+		<a href="javascript:void(0);" id="charge"><div class="btn">充值</div></a>
+		<div class="rectext">
+			<p>温馨提示：</p>
+			<p><span>1、</span>此费用将用于购买优蛋app下的相应课程。</p>
+			<p><span>2、</span>请在各大应用市场搜索下载【优蛋】。</p>
+			<p><span>3、</span>此费用为预收费用，正式开课将在5月，敬请期待。</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+// 配置jssdk
+$.ajax({
+	url: '/jssdk/config',
+	type: 'get',
+	data: {'url': location.href},
+	success: function(result, status, xhr) {
+		if(result.meta.code == 1) {
+			config = result.data.config;
+			wx.config({
+			    appId: config.appId,
+			    timestamp: config.timestamp,
+			    nonceStr: config.nonceStr,
+			    signature: config.signature,
+			    jsApiList: config.jsApiList
+			});
+		} else {
+			alert(result.meta.errInfo || result.meta.desc);
+		}
+	}
+});
+
+wx.error(function(res) {
+	alert('wx config error, res: ' + res);
+});
+
+// 点击支付
+wx.ready(function() {
+	$('#charge').click(function() {
+		var mobile = $('input[name="mobile"]').val();
+		var product = $('input[name="product"]').val();
+		var type = $('input[name="type"]').val();
+		var source = $('input[name="source"]').val();
+		if(!mobile) {
+			alert('请输入手机号');
+			return false;
+		}
+		if(!/^1\d{10}$/.test(mobile)) {
+			alert('手机号格式不正确');
+			return false;
+		}
+		
+		$.ajax({
+			url: '/pay/params',
+			type: 'post',
+			data: {'mobile': mobile, 'product': product, 'type': type, 's': source},
+			success: function(result, status, xhr) {
+				if(result.meta.code == 1) {
+					var params = result.data.params;
+					var orderSn = result.data.orderSn;
+					
+					// 唤起微信支付
+					wx.chooseWXPay({
+					    timestamp: params.timeStamp,
+					    nonceStr: params.nonceStr,
+					    package: params.packageStr,
+					    signType: params.signType,
+					    paySign: params.paySign,
+					    success: function (res) {
+					    	$.ajax({
+					    		url: '/pay/verify',
+					    		type: 'post',
+					    		data: {'orderSn': orderSn},
+					    		success: function(result) {
+					    			var meta = result.meta;
+					    			var data = result.data;
+					    			if(meta.code == 1) {
+					    				if(data.result == 1) {
+							    			location.href = "/charge/success"
+					    				} else {
+					    					location.href = "/charge/success";
+							    			//alert('充值失败，请将错误信息反馈给我们');
+					    				}
+					    			} else {
+					    				alert('充值失败, 信息：'+ result.meta.errInfo || result.meta.desc);
+					    			}
+					    		}, 
+					    		error: function(xhr, error, exception) {
+					    			alert('未知的异常，请将错误信息反馈给我们');
+					    		}
+					    	});
+					    	
+					    }, 
+					    fail: function(res) {
+					    	if(res.indexOf('cancel') == -1) {
+					    		alert(res);
+					    	}
+					    }
+					});
+				} else {
+					alert('获取支付参数失败，信息：' + result.meta.errInfo || result.meta.desc);
+				}
+			},
+			error: function() {
+				alert('未知的异常，请将错误信息反馈给我们');
+			}
+			
+		});
+		return false;
+	});
+});
+</script>
+
+</body>
+</html>

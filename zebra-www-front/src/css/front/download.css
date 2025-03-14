@@ -1,0 +1,131 @@
+.download-holder img {
+	width: 100%;
+}
+.download-info {
+	position: relative;
+	margin: 0 80px;
+	padding: 0 80px 100px;
+	top: -41px;
+	background-color: #fff;
+	min-height: 400px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+.download-type {
+	position: relative;
+	background: #fff;
+	width: 500px;
+	margin: 0 auto 40px;
+	padding: 18px 60px;
+	top: -40px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+	font-size: 20px;
+}
+.download-type ul {
+	position: relative;
+}
+.download-type ul li {
+	width: auto;
+}
+.download-type ul li:nth-child(2) {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.download-type li a {
+	display: block;
+	padding-left: 80px;
+	padding-right: 30px;
+	height: 53px;
+	line-height: 53px;
+	color: #4A4A4A;
+}
+.download-type li.active a {
+	color: #E91731;
+}
+.download-type .apple {
+	background: url(/src/img/front/download/apple.png) 10px 0 no-repeat;
+}
+.download-type .andriod {
+	background: url(/src/img/front/download/andr.png) 10px 0 no-repeat;
+}
+.download-type .other {
+	background: url(/src/img/front/download/other.png) 10px 0 no-repeat;
+}
+.download-list {
+	margin-bottom: 100px;
+}
+.download-list-holder {
+	display: none;
+}
+.download-list-holder.active {
+	display: block;
+}
+.download-list li {
+	float: left;
+	width: 47%;
+	margin-bottom: 60px;
+	margin-right: 6%;
+}
+.download-list li:nth-child(2n).list-holder {
+	margin-right: 0;
+}
+.list-holder .info {
+	padding: 43px 29px 47px 29px;
+	min-height: 180px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 1500px) {
+	.download-list li {
+		margin-bottom: 60px;
+	}
+	.download-info {
+		margin: 0 140px;
+		padding: 0 127px 100px;
+	}
+	.download-type {
+		padding: 24px 80px;
+	}
+	.list-holder .info {
+		padding: 43px 29px 47px 53px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+	}
+}
+
+.list-holder .title{
+	padding-left: 40px;
+	margin-top: 0;
+	background: url(/src/img/front/download/apple-title.png) no-repeat;
+	color: #4A4A4A;
+	height: 24px;
+	line-height: 24px;
+	font-size: 23px;
+}
+.list-holder .title.andriod {
+	background: url(/src/img/front/download/android-title.png) no-repeat;
+}
+.list-holder p {
+	margin: 14px 10px;
+}
+.list-holder .sub-title span {
+	font-size: 18px;
+	color: #4A4A4A;
+	margin-right: 10px;
+}
+.list-holder .desc {
+	font-size: 18px;
+	font-weight: lighter;
+	color: #9B9B9B;
+	line-height: 26px;
+}
+.app-download {
+	display: block;
+	margin: 22px 10px 0;
+	background: url(/src/img/front/download/appstore.png) no-repeat;
+	width: 180px;
+	height: 50px;
+}
+.app-download.andriod {
+	background: url(/src/img/front/download/android.png) no-repeat;
+}
+
+

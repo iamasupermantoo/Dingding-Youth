@@ -1,0 +1,42 @@
+html,
+body {
+  font-size: 13.3333vw;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+}
+.wrapper {
+  font-size: 0.24rem;
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+}
+.wrapper img {
+  width: 100%;
+  position: relative;
+  margin-top: -2px;
+}
+.wrapper .subscribe {
+  position: absolute;
+  left: 1.94rem;
+  top: 10.88rem;
+  width: 3.62rem;
+  height: 1.03rem;
+  background: url("../img/subscribe-b.png") no-repeat center center;
+  background-size: 100% auto;
+  text-indent: -9999px;
+}
+.wrapper .subscribe span {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 3.62rem;
+  height: 1.03rem;
+  background: url("../img/subscribe.png") no-repeat center center;
+  background-size: 100% auto;
+  top: -0.14rem;
+}
+.wrapper .subscribe.active {
+  background-image: none;
+}
+.wrapper .subscribe.active span {
+  top: 0;
+}

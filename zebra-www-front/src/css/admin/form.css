@@ -1,0 +1,50 @@
+.pwd-form { 
+	margin: 70px auto;
+	width: 450px;
+}
+.userinfo {
+	position: relative;
+	padding-left: 377px;
+}
+.userinfo .portrait {
+	position: absolute;
+	top: 120px;
+	left: 200px;
+}
+.userinfo .portrait img {
+	border-radius: 50%;
+}
+.userinfo .save-btn {
+	position: absolute;
+	top: 32px;
+	right: 54px;
+	font-size: 18px;
+	color: #000;
+}
+.userinfo .save-btn:hover {
+	opacity: .8;
+}
+.userinfo input {
+	background-color: #fff;
+}
+.userinfo select {
+	background-color: #fff;
+	height: 41px;
+}
+.userinfo input:disabled {
+	background-color: #f6f6f6;
+}
+.userinfo select:disabled {
+	background-color: #f6f6f6;
+}
+.common-form .form-list.success-tip {
+	margin: 0 0 -30px;
+	height: 20px;
+	visibility: hidden;
+	color: green;
+}
+.common-form .form-list.error-tip {
+	margin: 0 0 -30px;
+	visibility: hidden;
+	color: #ff0000;
+}

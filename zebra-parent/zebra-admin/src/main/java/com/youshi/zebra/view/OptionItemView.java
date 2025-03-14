@@ -1,0 +1,42 @@
+package com.youshi.zebra.view;
+
+import com.youshi.zebra.audio.utils.AudioUtils;
+import com.youshi.zebra.exam.model.OptionItem;
+import com.youshi.zebra.image.utils.ImageUtils;
+import com.youshi.zebra.media.constants.MediaType;
+
+public class OptionItemView {
+	private OptionItem delegate;
+
+	public OptionItemView(OptionItem delegate) {
+		this.delegate = delegate;
+	}
+
+	public String getLabel() {
+		return delegate.getLabel();
+	}
+
+	public ImageView getImage() {
+		Integer imageId = delegate.getImageId();
+		if (imageId == null) {
+			return null;
+		}
+		return new ImageView(ImageUtils.getImage(imageId));
+	}
+
+	public String getAudio() {
+		Integer audioId = delegate.getAudioId();
+		if (audioId == null) {
+			return null;
+		}
+		return AudioUtils.getUrl(AudioUtils.getAudio(audioId));
+	}
+
+	public String getText() {
+		return delegate.getText();
+	}
+
+	public MediaType getType() {
+		return MediaType.fromValue(delegate.getType());
+	}
+}

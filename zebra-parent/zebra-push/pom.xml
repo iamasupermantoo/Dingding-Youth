@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>zebra-parent</artifactId>
+		<groupId>com.youshi.zebra</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>zebra-push</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>zebra-push-client</module>
+		<module>zebra-push-component</module>
+		<module>zebra-push-server</module>
+	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<!-- 个推 -->
+			<dependency>
+				<groupId>com.gexin</groupId>
+				<artifactId>com.gexin.rp.sdk.base</artifactId>
+				<version>4.0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.gexin</groupId>
+				<artifactId>com.gexin.rp.sdk.http</artifactId>
+				<version>4.0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.gexin</groupId>
+				<artifactId>com.gexin.rp.sdk.template</artifactId>
+				<version>4.0.0.1</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.gexin.platform</groupId>
+			    <artifactId>gexin-rp-sdk-http</artifactId>
+			    <version>4.0.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.protobuf</groupId>
+				<artifactId>protobuf-java</artifactId>
+				<version>2.5.0</version>
+			</dependency>
+			
+			<!-- apns依赖老版本的httpclient，自己的工程里请使用httpcomponents -->
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>3.1</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

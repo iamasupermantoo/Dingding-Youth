@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	
+    <context:annotation-config/>
+    <context:component-scan base-package="com.youshi.zebra"/>
+    
+    <!-- ViewBuilder配置 -->
+	<bean id="doradoBuildContextFactory" class="com.youshi.zebra.core.web.view.DoradoBuildContextFactory"></bean>
+	<bean id="viewBuilder" class="com.dorado.mvc.view.ViewBuilder">
+		<constructor-arg index="0" ref="zebraApiModelBuilder" />
+		<constructor-arg index="1" value="com.dorado.api.view" />
+		<constructor-arg index="2" ref="doradoBuildContextFactory" />
+	</bean>
+    
+    <!-- 文件上传配置
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="6710886" />
+	</bean> -->
+	
+	<!-- HttpMessage消息和json之间的转换 -->
+	<bean id="objectMapper" class="com.dorado.framework.utils.DoradoMapperUtils" factory-method="getObjectMapper" primary="true" />
+	<bean id="jackson2HttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="objectMapper" ref="objectMapper" />
+	</bean>
+	
+	<!-- Controller方法处理器 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+    	<!-- 消息转换 -->
+        <property name="messageConverters">
+            <list>
+            	<ref bean="jackson2HttpMessageConverter"/>
+            </list>
+        </property>
+        
+        <!-- 自定义方法参数解析器 -->
+        <property name="customArgumentResolvers">
+            <list>
+                <bean class="com.dorado.mvc.arg_resolve.UuidAnnotationResolver"/>
+                <bean class="com.dorado.mvc.arg_resolve.VisitorAnnotationResolver"/>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- Controller统一异常处理器 -->
+    <bean class="com.dorado.mvc.exception.DoradoExceptionResolver" />
+
+	<!-- filters -->
+    <bean id="encodingFilter" class="org.springframework.web.filter.CharacterEncodingFilter">
+        <property name="encoding" value="utf-8"/>
+        <property name="forceEncoding" value="true"/>
+    </bean>
+    <bean id="requestContextFilter" class="org.springframework.web.filter.RequestContextFilter">
+        <property name="threadContextInheritable" value="true"/>
+    </bean>
+    <bean id="requestInfoInjectFilter" class="com.youshi.zebra.filter.RequestInfoInjectFilter" />
+
+</beans>

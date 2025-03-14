@@ -1,0 +1,105 @@
+.holder img {
+	width: 100%;
+}
+.holder {
+	margin: 0;
+	height: auto;
+}
+.header  {
+	z-index: 10;
+}
+.holder-container {
+	position: absolute;
+	top: 38%;
+	width: 100%;
+}
+.holder .holder-left {
+	float: left;
+	margin-left: 48px;
+	padding-top: 180px;
+	background: url(/src/img/front/index/logo-holder-new.png) no-repeat;
+}
+.holder-container .holder-left {
+	width: 469px;
+	background-size: 100% auto;
+}
+.holder-left .btns {
+	margin-left: -5px;
+}
+.holder .holder-right {
+	position: relative;
+	float: right;
+	margin-top: -40px;
+	margin-right: 21px;
+    background-color: rgba(255, 255, 255, .73);
+    padding: 50px 40px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+@media (min-width: 1200px) {
+	.holder .holder-right {
+		margin-right: 48px;
+	}
+}
+@media (min-width: 1500px) {
+	.holder .holder-left {
+		margin-left: 105px;
+	}
+	.holder .holder-right {
+		margin-right: 105px;
+		margin-top: 0;
+	}
+}
+.holder-right div {
+	position: relative;
+	padding-left: 59px;
+	margin-bottom: 30px;
+}
+.holder-right input {
+	padding: 16px;
+	width: 313px;
+	border: 1px solid #C1C1C1;
+	border-radius: 10px;
+	font-size: 18px;
+}
+.holder-right input:focus {
+	outline: none;
+}
+.holder-right input::-webkit-input-placeholder { /* WebKit browsers */
+	color: #C9C9C9;
+}
+.holder-right input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #C9C9C9;
+}
+.holder-right input::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #C9C9C9;
+}
+.holder-right input::-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #C9C9C9;
+} 
+.holder-right label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 60px;
+	color: #2C2C2C;
+}
+.holder-right button {
+    width: 100%;
+    background-color: #F7D433;
+    border: 1px solid #C1C1C1;
+    color: #2C2C2C;
+    height: 59px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.holder-right .error-tip {
+	position: absolute;
+	top: 25px;
+	left: 42px;
+}
+.header-index .sub-nav .nav-holder a {
+	font-weight: normal;
+}

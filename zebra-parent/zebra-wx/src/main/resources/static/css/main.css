@@ -1,0 +1,10 @@
+html,
+body {
+  font-size: 13.33333vw;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+  background: #eeeeee;
+}
+.wrapper {
+  font-size: 0.24rem;
+  background: #eeeeee;
+}

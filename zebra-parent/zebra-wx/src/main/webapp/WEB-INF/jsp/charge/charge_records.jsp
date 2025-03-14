@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="hweb" uri="http://dorado.com/tags/web" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="full-screen" content="yes"/>
+<meta name="browsermode" content="application"/>
+<meta name="x5-orientation" content="portrait"/>
+<meta name="x5-fullscreen" content="true"/>
+<meta name="x5-page-mode" content="app"/>
+<title>充值记录</title>
+<link rel="stylesheet" href="/charge/main.css" />
+<style>
+</style>
+</head>
+<body>
+	<div class="main">
+			<div class="content">
+				<div class="hasget">已订阅</div>
+				
+				<c:forEach items="${records.list }" var="record">
+				<span>
+					<div class="context">
+						<div class="leftc">¥199/年</div>
+						<div class="rightc">
+							<ul>
+								<li class="title">父母大讲堂</li>
+								<li>专家姓名：张巨河</li>
+								<li>费用说明：家庭教育年费</li>
+							</ul>
+						</div>
+					</div>
+					<div class="time">订阅时间：${record.chargeTime }</div>
+				</span>
+				</c:forEach>
+			</div>
+	</div>
+</body>
+</html>

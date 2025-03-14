@@ -1,0 +1,610 @@
+.holder {
+	position: relative;
+	margin: 20px auto 60px;
+	padding-left: 207px;
+}
+.holder .holder-l{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.portrait {
+	border: 1px solid #ddd;
+	background-color: #fff8dd;
+	padding: 24px 10px;
+}
+.portrait p {
+	width: 86px;
+	height: 86px;
+	margin: 0 auto;
+}
+.portrait img {
+	border: 4px solid #fff;
+	border-radius: 50%;
+}
+.portrait .username {
+	width: 144px;
+	line-height: 44px;
+	color: #000;
+	font-size: 20px;
+	text-align: center;
+	overflow: hidden;
+}
+.holder-l .sub-nav {
+	border: 1px solid #ddd;
+	padding: 14px 0;
+	margin-top: 20px;
+	background-color: #fff;
+}
+.holder-l .sub-nav li {
+	position: relative;
+	padding: 15px 23px;
+	margin-top: 19px;
+}
+.holder-l .sub-nav li:first-child {
+	margin-top: 0;
+}
+.holder-l .sub-nav li:last-child a{
+	border-bottom: none;
+}
+.holder-l .sub-nav li span {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 3px;
+	height: 34px;
+	background-color: #fff;
+}
+.holder-l .sub-nav li.active span {
+	background-color: #fad336;
+}
+.holder-l .sub-nav li a {
+	padding: 0 13px 30px 13px;
+	line-height: 34px;
+	border-bottom: 1px solid #ddd;
+	font-size: 16px;
+	color: #838181;
+}
+.holder-l .sub-nav li.active a {
+	color: #000;
+}
+.holder-l .sub-nav li a i {
+	display: inline-block;
+	margin-right: 10px;
+	width: 16px;
+	height: 17px;
+	vertical-align: middle;
+}
+i.listen {
+	background: url(/src/img/admin/common/listen.png) no-repeat;
+}
+i.course {
+	background: url(/src/img/admin/common/course.png) no-repeat;
+}
+i.test {
+	background: url(/src/img/admin/common/test.png) no-repeat;
+}
+i.order {
+	background: url(/src/img/admin/common/order.png) no-repeat;
+}
+.holder-r {
+	padding: 14px 0; 
+	min-height: 181px;
+}
+#indexHolder .holder-r {
+	min-height: 551px;
+}
+.holder-r .title {
+	margin: 7px 0 14px; 
+}
+.skin-list {
+	padding: 18px 0;
+	margin-bottom: 39px;
+}
+.skin-list li {
+	float: left;
+	width: 33%;
+	padding: 7px 0;
+	border-right: 1px solid #ddd;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	line-height: 25px;
+}
+.skin-list li:last-child {
+	border-right: none;
+}
+.calendar {
+	margin-top: 35px;
+	margin-bottom: 16px;
+}
+.mycourse {
+	position: relative;
+	background-color: #fff;
+	padding: 25px 16px;
+	padding-left: 150px;
+	border: 1px solid #ddd;
+	border-bottom: none;
+}
+.mycourse:last-child {
+	border-bottom: 1px solid #ddd;
+}
+.mycourse .title,
+.course-title .title {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+}
+.mycourse li,
+.course-title li {
+	line-height: 32px;
+	font-size: 16px;
+	color: #363636;
+}
+.course-title {
+	position: relative;
+	padding: 25px 16px;
+	padding-left: 155px;
+}
+.course-title ul {
+	height: 130px;
+}
+.conduct-class {
+	position: absolute;
+	top: 69px;
+	right: 25px;
+}
+.holder-r .course-list {
+	min-height: 102px;
+	background-color: #fff;
+}
+.holder-r .course-list li {
+	border: 1px solid #ddd;
+	border-top: none;
+	padding: 26px 35px;
+}
+.holder-r .course-list .name {
+	width: 200px;
+}
+.holder-r .course-list span {
+	display: inline-block;
+	margin-right: 24px;
+	width: 120px;
+	color: #363636;
+	font-size: 16px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.holder-r .course-list span.absent {
+	color: #ff620c;
+}
+.more {
+	border: 1px solid #ddd;
+	border-top: none;
+	background-color: #f4f4f4;
+	color: #333;
+	font-size: 16px;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+}
+.more .icon-plat-down-open-big:before {
+	transform: rotate(0deg);
+}
+.more.launch .icon-plat-down-open-big:before{
+	transform: rotate(-180deg);
+    transition: transform .3s ease;
+}
+.calendar-holder {
+	overflow: hidden;
+}
+.calendar-holder .clndr-controls {
+	background-color: #fff8dd;
+	border-bottom: 1px solid #ddd;
+	height: 60px;
+	line-height: 60px;
+}
+.clndr-controls > div {
+	display: inline-block;
+}
+.clndr-control-button {
+	width: 45%;
+	text-align: right;
+}
+.clndr-controls .rightalign {
+	text-align: left;
+}
+.calendar-holder .clndr-controls .month {
+	width: 10%;
+	text-align: center;
+}
+.clndr-table {
+	width: 100%;
+}
+.clndr-table .header-days {
+	border-bottom: 1px solid #ddd;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+}
+.clndr-table .day {
+	height: 60px;
+	line-height: 48px;
+	text-align: center;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.clndr-table .day.active {
+	position: relative;
+}
+.clndr-table .day.active .day-contents {
+	color: #fff;
+}
+.clndr-table .day.active:before {
+	position: absolute;
+	content: ' ';
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -21px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #fc8d35;
+}
+.clndr-table .day.active .day-contents {
+	position: relative;
+	height: 48px;
+	line-height: 48px;
+}
+.calendar-holder .clndr-previous-button {
+	text-indent: 999999em;
+	display: inline-block;
+	width: 12px;
+	height: 61px;
+	background: url(/src/img/admin/left.png) -1px 23px no-repeat;
+	cursor: pointer;
+}
+.calendar-holder .clndr-next-button {
+	text-indent: 999999em;
+	display: inline-block;
+	width: 12px;
+	height: 61px;
+	background: url(/src/img/admin/right.png) -1px 23px no-repeat;
+	cursor: pointer;
+}
+.adjacent-month {
+	text-indent: -9999em;
+}
+
+.adjacent-month.today:before {
+	background-color: #fff;
+}
+.event .day-contents {
+	color: #999;
+	background: url(/src/img/admin/event-points.png) 50% 100% no-repeat;
+}
+.event.active .day-contents {
+	color: #fff;
+	background: url(/src/img/admin/event-points-active.png) 50% 100% no-repeat;
+}
+.today {
+	position: relative;
+}
+.today .day-contents {
+	color: #fff;
+}
+.today:before {
+	position: absolute;
+	content: ' ';
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -21px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #b7b7b7;
+}
+.today.active:before {
+	background-color: #fc8d35;
+}
+.today .day-contents {
+	position: relative;
+	height: 48px;
+	line-height: 48px;
+}
+.course-holder {
+	margin-bottom: 14px;
+}
+.course-list li.hidden {
+	display: none;
+}
+.course-holder:not(:first-child) .common-holder {
+	border-top: 1px solid #ddd;
+}
+
+/**
+ * 订单
+ */
+.order-list {
+	margin: 22px 0;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	font-size: 16px;
+}
+.order-list.order-empty {
+	background-color: #f9f9f9;
+	margin: 100px 0;
+	border: none;
+	color: #ddd;
+	text-align: center;
+}
+.order-name {
+	padding: 20px;
+	border-bottom: 1px solid #ddd;
+	color: #626262;
+}
+.order-name .float-right {
+	display: inline-block;
+	min-width: 88px;
+	text-align: center;
+}
+.order-name .price {
+	color: #ff0000;
+	font-size: 18px;
+}
+.order-info {
+	position: relative;
+	margin: 20px;
+	min-height: 130px;
+	padding-left: 135px;
+}
+.order-info .title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+.order-info li {
+	line-height: 32px;
+	color: #363636;
+}
+.pay-class {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+}
+
+.disabled {
+	background-color: #cacaca;
+	color: #fff;
+}
+.dlg-class .title {
+	margin: -10px 0 30px;
+	font-size: 16px;
+	color: #8a8a8a;
+	text-align: left;
+}
+.dlg-class li {
+	float: left;
+	width: 200px;
+}
+.dlg-class li a {
+	display: block;
+}
+.dlg-class li span {
+	display: block;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+.empty-holder {
+	margin: 80px 0;
+	border: none;
+	color: #ddd;
+	text-align: center;
+}
+
+/**
+ * 测评
+ */
+.test-holder {
+	padding: 210px 70px;
+	width: 737px;
+	height: 728px;
+	background: url(/src/img/admin/question/question-bg.png) no-repeat;
+	background-size: 100% auto;
+}
+.start {
+	// display: none;
+}
+.test-holder .start p {
+	padding: 0 10px 68px;
+	text-align: center;
+}
+.test-holder .start-btn {
+	display: block;
+	margin: 0 auto;
+	width: 164px;
+	height: 83px;
+	background: url(/src/img/admin/question/start.png) no-repeat;
+	border: none;
+	cursor: pointer;
+}
+.test-tmp {
+	display: none;
+	margin-top: -40px;
+	padding: 0 50px;
+}
+.test-tmp h1 {
+	font-size: 25px;
+	line-height: 45px;
+	font-weight: bold;
+	color: #3a3a3a;
+}
+.choose-list {
+	padding: 0 40px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.choose-list img {
+	float: left;
+}
+.choose-list ul {
+	margin-top: 30px;
+	// width: 164px;
+	float: left;
+	font-weight: bold;
+}
+.test1 ul {
+	margin-left: 180px;
+}
+.test2 {
+	margin-bottom: 15px;
+}
+.test2 ul {
+	margin-top: 0;
+	margin-left: 120px;
+}
+.test3 {
+	margin-bottom: 12px;
+}
+.test3 ul {
+	margin-top: 0;
+	margin-left: 70px;
+}
+.test4 {
+	margin-bottom: 32px;
+}
+.test4 ul {
+	margin-left: 15px;
+}
+.test5 {
+	margin-bottom: 32px;
+}
+.test5 ul {
+	margin-left: 100px;
+}
+.test6 {
+	margin-bottom: 32px;
+}
+.test6 ul {
+	width: 340px;
+	margin-left: 15px;
+}
+.test6 ul li {
+	float: left;
+}
+.test6 ul li.a {
+	margin-right: 26px;
+}
+.test7 {
+	margin-bottom: 32px;
+}
+.test7 ul {
+	margin-left: 15px;
+}
+.test8 {
+	margin-bottom: 17px;
+}
+.test8 ul {
+	margin-top: 0;
+	margin-left: 56px;
+}
+.test9 {
+	margin-bottom: 32px;
+}
+.test9 ul {
+	margin-left: 88px;
+}
+.test10 {
+	margin-bottom: 8px;
+}
+.test10 ul {
+	margin-left: 35px;
+	margin-top: 10px
+}
+.choose-list ul li {
+	padding-right: 17px;
+	border: 3px solid #ffe4c9;
+	background-color: #ffe4c9;
+	height: 48px;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 35px;
+	cursor: pointer;
+}
+.choose-list ul li.choose{
+	border: 3px solid #078eec;
+	background-color: #fff7ef; 
+	border-radius: 50px;
+}
+.choose-list ul li a {
+	display: block;
+	padding-left: 55px;
+	line-height: 46px;
+	color: #e6891f;
+	cursor: pointer;
+}
+.choose-list li.a a {
+	background: url(/src/img/admin/question/a.png) 10px center no-repeat;
+	background-size: auto 39px;
+}
+.choose-list li.b a {
+	background: url(/src/img/admin/question/b.png) 10px center no-repeat;
+	background-size: auto 39px;
+}
+.choose-list li.c a {
+	background: url(/src/img/admin/question/c.png) 10px center no-repeat;
+	background-size: auto 39px;
+}
+.choose-list li.d a {
+	background: url(/src/img/admin/question/d.png) 10px center no-repeat;
+	background-size: auto 39px;
+}
+.next-btn {
+	display: none;
+	float: right;
+	margin-top: 110px;
+	width: 106px;
+	height: 65px;
+	background: url(/src/img/admin/question/next-btn.png) center no-repeat;
+	text-indent: -100000em;
+	border: none;
+}
+.test-holder .end {
+	display: none;
+	padding-top: 30px;
+
+}
+.test-holder .end p {
+	margin-bottom: 26px;
+	font-size: 28px;
+	color: #3a3a3a;
+	letter-spacing: 4px;
+	font-weight: bold;
+	text-align: center;
+}
+.test-holder .end h2 {
+	margin-top: 42px;
+	font-size: 18px;
+	color: #3a3a3a;
+	text-align: center;
+}
+.test-holder .end p span {
+	color: #ff2626;
+}
+
+
+

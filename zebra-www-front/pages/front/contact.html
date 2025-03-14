@@ -1,0 +1,78 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style.css">
+    	<link rel="stylesheet" href="/src/css/front/contact.css">
+    </head>
+	<body id="3">
+		<!--#include file="/pages/common/header-index.html"-->
+		<div class="contact-holder">
+			<div class="first-page" id="firstPage">
+				<div class="titles">
+					<h1><span>与</span>鼎鼎少年建立联络</h1>
+					<h2>鼎鼎少年向您提供多种渠道与我们沟通</h2>
+				</div>
+			</div>
+			<div class="contact">
+				<p class="title"><i></i><span>YIBANGECU</span></p>
+				<p>我是小字描述我是小字描述我是小字描述我是小字描述我是小我是小字描述我是小字是小字描述我是小我是小
+字描述我是小字描述我是我是小字描述我是小字描述我是小字描述我</p>
+				<div class="contact-info-holder clearfix">
+					<div class="contact-left">
+						<ul class="clearfix">
+							<li class="tele"><span>+86 021 88888888</span></li>
+							<li class="mail"><span>SUPPORT@DDLAD.COM</span></li>
+							<li class="webchat"><span>DDLAD</span></li>
+							<li class="code"><img src="/src/img/front/common/webchat-code.jpg" alt="二维码"></li>
+						</ul>
+					</div>
+					<div class="contact-left">
+						<form class="contact-form" action="">
+							<div class="form-row clearfix">
+								<input name="" type="text" placeholder="如何称呼您">
+								<input name="" type="text" placeholder="如何称呼您">
+							</div>
+							<div class="form-row clearfix">
+								<input name="" type="text" placeholder="如何称呼您">
+								<input name="" type="text" placeholder="如何称呼您">
+							</div>
+							<textarea placeholder="如何称呼您" name="" id="" cols="30" rows="10"></textarea>
+							<button class="form-common-btn" type="submit">稀缺师资</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="map" id="addrMap"></div>
+			<!-- <img src="/src/img/front/contact/map.png" alt="地址"> -->
+		</div>
+		<!--#include file="/pages/common/footer.html"-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=G1LR4PSLnh8IgVlDuFNmlSaUVlL2innj"></script>
+		<script type="text/javascript">
+			$(function() {
+				var wHeight = window.innerHeight;
+				$('#firstPage').height(wHeight);
+				var map = new BMap.Map("addrMap");    // 创建Map实例
+				map.addControl(new BMap.NavigationControl()); 
+				var myIcon = new BMap.Icon("/src/img/front/contact/marker.png", new BMap.Size(23, 29), {
+				   offset: new BMap.Size(10, 25) 
+				 });
+				var myGeo = new BMap.Geocoder();
+				// 将地址解析结果显示在地图上,并调整地图视野
+				myGeo.getPoint("辽宁省大连市中山区友好路158号友好大厦2115", function(point){
+					if (point) {
+						map.centerAndZoom(point, 18);
+						var marker = new BMap.Marker(point, {icon: myIcon});
+						marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+						map.addOverlay(marker);
+					}else{
+						alert("您选择地址没有解析到结果!");
+					}
+				}, "大连市");
+				     
+			});
+		</script>
+	</body>
+</html>

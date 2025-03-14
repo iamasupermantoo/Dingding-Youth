@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <description>zebra enum functions</description>
+    <tlib-version>2.2</tlib-version>
+    <short-name>zenum</short-name>
+    <uri>http://zebra.com/tags/zenum</uri>
+    
+	<!-- 用户相关 -->
+    <function>
+        <name>userType</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String userType(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>userStatus</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String userStatus(java.lang.Integer)</function-signature>
+    </function>
+    
+    <!-- 操作日志相关 -->
+    <function>
+        <name>logType</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String logType(java.lang.Integer)</function-signature>
+    </function>
+
+    <!-- 性别 -->
+    <function>
+        <name>gender</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String gender(java.lang.Integer)</function-signature>
+    </function>
+    
+    <!-- 媒体类型 -->
+    <function>
+        <name>mediaType</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String mediaType(java.lang.Integer)</function-signature>
+    </function>
+    
+    <function>
+        <name>recommendFeedType</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String recommendFeedType(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>gotoPageType</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String gotoPageType(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>bannerStatus</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String bannerStatus(java.lang.Integer)</function-signature>
+    </function>
+    
+    <function>
+        <name>courseStatus</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String courseStatus(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>lessonStatus</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String lessonStatus(java.lang.Integer)</function-signature>
+    </function>
+    
+    <function>
+        <name>orderStatus</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String orderStatus(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>payStatus</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String payStatus(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>payChannel</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String payChannel(java.lang.Integer)</function-signature>
+    </function>
+    <function>
+        <name>chatResult</name>
+        <function-class>com.youshi.zebra.core.web.taglib.EnumNameFunction</function-class>
+        <function-signature>java.lang.String chatResult(java.lang.Integer)</function-signature>
+    </function>
+    
+</taglib>

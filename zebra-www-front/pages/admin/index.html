@@ -1,0 +1,78 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style-admin.css">
+    	<link rel="stylesheet" href="/src/css/admin/index.css">
+    	<script type="text/juicer" id="remindersTpl">
+    		{@if data.length === 0}
+    			<div class="empty-holder">没有已经预约的课程</div>
+    		{@/if}
+			{@each data as item,index}
+			    <div class="mycourse">
+					<p class="title"><img src="@{item.courseImage.pattern}" width="102" height="130"></p>
+					<ul>
+						<li>课 程：@{item.course}</li>
+						<li>课 次：第@{item.cnt}节课</li>
+						<li>老师：@{item.teacher}</li>
+						<li>时间：@{item.time}</li>
+					</ul>
+					{@if item.status === 0}
+						<button class="conduct-class common-border-btn">未上课</button>
+					{@else}
+						<button class="conduct-class disabled common-border-btn">已上课</button>
+					{@/if}
+					
+				</div>
+			{@/each}
+		</script>
+		<script type="text/juicer" id="userTpl">
+			<p>
+				<a href="/pages/admin/userinfo.html">
+					<img src="@{portraitUrl}" width="86" height="86" alt="头像">
+				</a>
+			</p>
+			<div class="username">@{username}</div>
+		</script>
+		<script type="text/juicer" id="learnStepTpl">
+			<li><p>已完成课时</p><p>@{finishedCnt}</p></li>
+			<li><p>全部课程</p><p>@{courseCnt}</p></li>
+			<li><p>累计英语</p><p>@{duration}分钟</p></li>
+		</script>
+    </head>
+	<body>
+		<!--#include file="/pages/common/header-admin.html"-->
+		<div class="container page-holder" id="indexHolder">
+			<div class="holder">
+				<div class="holder-l">
+					<div class="portrait" id="portrait"></div>
+					<div class="sub-nav">
+						<ul>
+							<li class="active"><span></span><a href="/pages/admin/index.html"><i class="listen"></i>我的课表</a></li>
+							<li><span></span><a href="/pages/admin/course.html"><i class="course"></i>我的课程</a></li>
+							<li><span></span><a href="/pages/admin/test.html"><i class="test"></i>课前评测</a></li>
+							<li><span></span><a href="/pages/admin/order.html"><i class="order"></i>我的订单</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="holder-r">
+					<p class="title"><span>学习进度</span></p>
+					<div class="skin-list common-holder">
+						<ul class="clearfix" id="stepHolder"></ul>
+					</div>
+					<p class="title"><span>我的课表</span><a href="/pages/admin/discovery.html" class="common-btn float-right">立即预约</a></p>
+					<div class="calendar common-holder">
+					    <div class="calendar-holder"></div>
+					</div>
+					<div id="myCouseList"></div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/common/footer-admin.html"-->
+		<script type="text/javascript" language="javascript" src="/src/lib/underscore/1.8.3/underscore.js"></script>
+        <script src="/src/lib/moment/2.9.0/src/moment.js"></script>
+    	<script src="/src/lib/clndr/src/clndr.js"></script>
+	</body>
+</html>

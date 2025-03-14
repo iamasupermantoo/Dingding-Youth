@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <description>zebra web functions</description>
+    <tlib-version>2.2</tlib-version>
+    <short-name>zweb</short-name>
+    <uri>http://zebra.com/tags/zweb</uri>
+ 
+	<!-- 首页 -->
+    <function>
+        <name>firstPage</name>
+        <function-class>com.youshi.zebra.core.web.taglib.PageFunction</function-class>
+        <function-signature>java.lang.String firstPage()</function-signature>
+    </function>
+	<!-- 下一页 -->
+    <function>
+        <name>nextPage</name>
+        <function-class>com.youshi.zebra.core.web.taglib.PageFunction</function-class>
+        <function-signature>java.lang.String nextPage(com.dorado.framework.model.PageView)</function-signature>
+    </function>
+    
+    <!-- <function>
+        <name>firstPage</name>
+        <function-class>com.youshi.mastiff.core.web.taglib.PageFunction</function-class>
+        <function-signature>java.lang.String firstPage()</function-signature>
+    </function>
+    <function>
+        <name>nextPage</name>
+        <function-class>com.youshi.mastiff.core.web.taglib.PageFunction</function-class>
+        <function-signature>java.lang.String nextPage(com.dorado.framework.model.PageView)</function-signature>
+    </function> -->
+    
+	
+	<!-- 和当前时间比，过了多长时间 -->
+    <function>
+        <name>beforeTime</name>
+        <function-class>com.youshi.zebra.core.web.taglib.DateTimeFunction</function-class>
+        <function-signature>java.lang.String beforeTime(long)</function-signature>
+    </function>
+    
+    <function>
+        <name>datetime</name>
+        <function-class>com.youshi.zebra.core.web.taglib.DateTimeFunction</function-class>
+        <function-signature>java.lang.String datetime(long)</function-signature>
+    </function>
+    
+    <function>
+        <name>date</name>
+        <function-class>com.youshi.zebra.core.web.taglib.DateTimeFunction</function-class>
+        <function-signature>java.lang.String date(long)</function-signature>
+    </function>
+    
+    <!-- 是否有权限 -->
+    <function>
+        <name>hasRole</name>
+        <function-class>com.youshi.zebra.core.web.taglib.PrivilegeFunction</function-class>
+        <function-signature>boolean hasPrivilege(java.lang.String)</function-signature>
+    </function>
+    
+    <function>
+        <name>imageUrl</name>
+        <function-class>com.youshi.zebra.core.web.taglib.ImageFunction</function-class>
+        <function-signature>String imageUrl(com.youshi.zebra.image.model.ImageModel, int, int)</function-signature>
+    </function>
+    
+
+</taglib>

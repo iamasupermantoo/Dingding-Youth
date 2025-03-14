@@ -1,0 +1,60 @@
+.list {
+	position: relative;
+	margin: 20px 0;
+	padding: 25px 25px 25px 286px;
+	min-height: 236px;
+}
+.list.common-holder:not(:first-child) {
+	border-top: 1px solid #ddd;
+}
+.list .left {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 236px;
+}
+.list .left p {
+	margin: 17px auto;
+	text-align: center;
+}
+.list .right p {
+	margin: 0;
+	font-size: 20px;
+	color: #000;
+}
+.list .right .brief {
+	padding: 24px 0;
+	border-bottom: 1px solid #ddd;
+}
+.list .brief span {
+	margin-right: 30px;
+	padding-left: 25px;
+	font-size: 18px;
+	color: #000;
+}
+span.time {
+	background: url(/src/img/admin/time.png) 1px no-repeat;
+}
+span.level {
+	background: url(/src/img/admin/level.png) 1px no-repeat;
+}
+
+.list .des {
+	font-size: 16px;
+	color: #000;
+	line-height: 30px;
+}
+.list .des h3 {
+	margin-top: 23px;
+	font-weight: bold;
+}
+.list .des p,
+.list .des li {
+	font-size: 16px;
+}
+.disabled {
+	background-color: #cacaca;
+	color: #fff;
+}
+
+

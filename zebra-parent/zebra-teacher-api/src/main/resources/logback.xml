@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds">
+
+	<property name="LOG_HOME" value="/data/log/zebra-teacher-api" />
+	<property name="PKG" value="com.youshi.zebra" />
+
+	<!-- main log -->
+	<appender name="mainFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/main.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/main.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] %c ## %msg%n
+			</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>DENY</onMatch>
+			<onMismatch>ACCEPT</onMismatch>
+		</filter>
+	</appender>
+
+	<!-- exception log -->
+	<appender name="exceptionFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/exception.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/exception.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] %c ## %msg%n
+			</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<!-- perfs log -->
+	<appender name="perfsFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/perfs.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/perfs.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- monitor log -->
+	<appender name="monitorFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/monitor.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/monitor.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] %c ## %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- access log -->
+	<appender name="userAccessLogFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/access.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/access.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- sql log -->
+	<appender name="sqlLogFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/sql.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/sql.log.%d{yyyy-MM-dd}</fileNamePattern>
+		</rollingPolicy>
+		<!-- <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+			<evaluator>
+				<matcher>
+					<Name>useless</Name>
+					<regex>Executing prepared SQL query</regex>
+				</matcher>
+				<expression>useless.matches(formattedMessage)</expression>
+			</evaluator>
+			<OnMismatch>ACCEPT</OnMismatch>
+			<OnMatch>DENY</OnMatch>
+		</filter> -->
+		<encoder charset="UTF-8">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} ## %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- dependency log -->
+	<appender name="dependencyFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/dependency.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/dependency.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] %c ## %msg%n
+			</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>DENY</onMatch>
+			<onMismatch>ACCEPT</onMismatch>
+		</filter>
+	</appender>
+
+
+	<!-- loggers -->
+	<root level="INFO">
+		<appender-ref ref="dependencyFile" />
+		<appender-ref ref="exceptionFile" />
+	</root>
+	<logger name="${PKG}" level="DEBUG" additivity="false">
+		<appender-ref ref="mainFile" />
+		<appender-ref ref="exceptionFile" />
+	</logger>
+	<logger name="userAccessLog" level="INFO" additivity="false">
+		<appender-ref ref="userAccessLogFile" />
+	</logger>
+	<logger name="speed4j" level="INFO" additivity="false">
+		<appender-ref ref="perfsFile" />
+	</logger>
+	<logger name="monitor" level="INFO" additivity="false">
+		<appender-ref ref="monitorFile" />
+	</logger>
+	<!-- <logger name="org.springframework.jdbc.core.JdbcTemplate"
+		additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="sqlLogFile" />
+	</logger>
+	<logger name="org.springframework.jdbc.core.StatementCreatorUtils"
+		additivity="false" level="TRACE">
+		<appender-ref ref="sqlLogFile" />
+	</logger> -->
+</configuration>

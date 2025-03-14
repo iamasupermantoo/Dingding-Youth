@@ -1,0 +1,8 @@
+
+mian类名后缀:
+Daemon: 作为一个服务，长久地运行。
+Runner: 执行成功后退出，可能是crontab控制，周期执行
+
+包:
+com.dorado.runner.tmp包：一些临时任务，一般只执行一次就废弃的任务
+com.dorado.runner.thrift包：thrift服务

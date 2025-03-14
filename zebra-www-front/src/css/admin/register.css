@@ -1,0 +1,154 @@
+.step-list {
+	border-bottom: 2px solid #ddd;
+	line-height: 28px;
+	font-size: 16px;
+	color: #858585;
+}
+.step-list li {
+	float: left;
+	width: 33%;
+	margin-bottom: -2px;
+	text-align: center;
+	
+}
+.step-list li i {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background-color: #ddd;
+	border-radius: 50%;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+}
+.step-list li span {
+	display: block;
+	margin: 0 50px;
+	padding: 15px 28px;
+	border-bottom: 2px solid #ddd;
+}
+.step-list li.active span {
+	border-bottom: 2px solid #fad336;
+}
+.step-list li.active i {
+	background-color: #fad336;
+	color: #000;
+}
+.step-list li.active {
+	color: #000;
+}
+.register-form {
+	margin: 100px auto 50px;
+	width: 500px;
+}
+.common-form .form-list .identify-input {
+	width: 130px;
+}
+.identify {
+	background-color: #fad336;
+	padding: 11px 12px;
+	margin-left: 18px;
+	width: 126px;
+	border: none;
+	font-size: 16px;
+	color: #000;
+	cursor: pointer;
+}
+.identify:hover {
+	opacity: 0.8;
+}
+.identify.disabled {
+	background-color: #ddd;
+	color: #858585;
+	font-size: 14px;
+}
+.identify.disabled:hover {
+	opacity: 1;
+}
+.agreement {
+	text-align: center;
+	font-size: 12px;
+	color: #000;
+	cursor: pointer;
+}
+
+.agreement span {
+	color: #fad336;
+}
+.agreement i {
+	position: relative;
+	margin-right: 6px;
+}
+.agreement i:before {
+  background: #ddd;
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+  margin-top: -3px;
+  border-radius: 2px;
+}
+.agreement i:after {
+    content: '';
+    width: 7px;
+    height: 3px;
+    border: 1px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    margin-top: -3px;
+    margin-left: 3px;
+}
+.agreement i.checked:before{
+	background: #fad336;
+}
+.common-form .form-footer {
+	margin-top: 60px;
+}
+.register-form h2 {
+	margin: 25px 0;
+	color: #88b822;
+	font-size: 20px;
+	text-align: center;
+}
+.seconds {
+	font-size: 14px;
+	color: #8f8f8f;
+	text-align: center;
+}
+.goto-index {
+	display: block;
+	background-color: #fad336;
+	margin-top: 58px;
+	padding: 13px 20px;
+	border: none;
+	font-size: 16px;
+	color: #000;
+	text-align: center;
+}
+.goto-index:hover {
+	opacity: .8;
+}
+.success-form {
+	width: 280px;
+	text-align: center;
+}
+.error-tip {
+	margin-bottom: -25px;
+	padding-left: 120px;
+	height: 16px;
+	font-size: 14px;
+	color: #ff0000;
+	visibility: hidden;
+}
+
+
+
+
+
+

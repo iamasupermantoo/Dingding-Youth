@@ -1,0 +1,102 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style.css">
+    	<link rel="stylesheet" href="/src/css/front/download.css">
+    </head>
+	<body id="2">
+		<!--#include file="/pages/common/header-index.html"-->
+		<div class="download-holder">
+			<img src="/src/img/front/download/bg.jpg" alt="">
+			<div class="download-info">
+				<div class="download-type">
+					<ul id="downloadType" class="type clearfix">
+						<li data-type="apple" class="apple active"><a href="javascript:;">APPLE程序</a></li>
+						<li data-type="andriod" class="andriod"><a href="javascript:;">Android程序</a></li>
+						<!-- <li class="other"><a href="javascript:;">其它软件</a></li> -->
+					</ul>
+				</div>
+				<div data-type="apple" class="download-list-holder active">
+					<ul class="download-list clearfix">
+						<li class="list-holder">
+							<div class="info">
+								<p class="title">IPhone 家长端</p>
+								<p class="sub-title">
+									<span>软件大小:12:00MB</span>
+									<span>需要IOS8以上版本</span>
+								</p>
+								<p class="desc">描述:我是软件描述我是软件描述我是软件描述我是描述我是软件描述我是软件描述。</p>
+								<a class="app-download" href="javascript:;"></a>
+							</div>
+						</li>
+						<li class="list-holder">
+							<div class="info">
+								<p class="title">IPAD 学生端</p>
+								<p class="sub-title">
+									<span>软件大小:12:00MB</span>
+									<span>需要IOS8以上版本</span>
+								</p>
+								<p class="desc">描述:我是软件描述我是软件描述我是软件描述我是描述我是软件描述我是软件描述。</p>
+								<a class="app-download" href="javascript:;"></a>
+							</div>
+						</li>
+						<li class="list-holder">
+							<div class="info">
+								<p class="title">教师端</p>
+								<p class="sub-title">
+									<span>软件大小:12:00MB</span>
+									<span>需要IOS8以上版本</span>
+								</p>
+								<p class="desc">描述:我是软件描述我是软件描述我是软件描述我是描述我是软件描述我是软件描述。</p>
+								<a class="app-download" href="javascript:;"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div data-type="andriod" class="download-list-holder">
+					<ul class="download-list clearfix">
+						<li class="list-holder">
+							<div class="info">
+								<p class="title andriod">学生家长端</p>
+								<p class="sub-title">
+									<span>软件大小:12:00MB</span>
+									<span>需要IOS8以上版本</span>
+								</p>
+								<p class="desc">描述:我是软件描述我是软件描述我是软件描述我是描述我是软件描述我是软件描述。</p>
+								<a class="app-download andriod" href="javascript:;"></a>
+							</div>
+						</li>
+						<li class="list-holder">
+							<div class="info">
+								<p class="title andriod">教师端</p>
+								<p class="sub-title">
+									<span>软件大小:12:00MB</span>
+									<span>需要IOS8以上版本</span>
+								</p>
+								<p class="desc">描述:我是软件描述我是软件描述我是软件描述我是描述我是软件描述我是软件描述。</p>
+								<a class="app-download andriod" href="javascript:;"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/common/footer.html"-->
+		<script type="text/javascript">
+			$(function() {
+				$('#downloadType').find('li').on('click', function (e) {
+					var type = $(this).attr('data-type');
+					$('#downloadType').find('.active').removeClass('active');
+					$(this).addClass('active');
+					$('.download-list-holder.active').fadeOut();
+					$('.download-list-holder.active').removeClass('active');
+					$('.download-list-holder[data-type=' + type + ']').fadeIn();
+					$('.download-list-holder[data-type=' + type + ']').addClass('active');
+				});
+			});
+		</script>
+	</body>
+</html>

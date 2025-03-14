@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds">
+
+	<property name="LOG_HOME" value="/data/log/zebra-event-server" />
+
+	<appender name="stdout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/main.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/main.log.%d{yyyy-MM-dd}</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%d{yy-MM-dd HH:mm:ss.SSS} %level %c ## %msg%n</pattern>
+		</encoder>
+	</appender>
+	<logger name="com.dorado" level="debug" additivity="false">
+		<appender-ref ref="stdout" />
+	</logger>
+
+	<appender name="eventFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/event.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/event.log.%d{yyyy-MM-dd}</fileNamePattern>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%d{yy-MM-dd HH:mm:ss.SSS}|%msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<logger name="event" level="all" additivity="false">
+		<appender-ref ref="eventFile" />
+	</logger>
+	
+	<appender name="perfsFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/perfs.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/perfs.log.%d{yyyy-MM-dd}</fileNamePattern>
+			<maxHistory>7</maxHistory>
+		</rollingPolicy>
+		<encoder charset="UTF-8">
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	<logger name="speed4j" level="all" additivity="false">
+		<appender-ref ref="perfsFile" />
+	</logger>
+
+	<root>
+		<appender-ref ref="stdout" />
+		<level value="info"/>
+	</root>
+</configuration>

@@ -1,0 +1,29 @@
+package com.youshi.zebra.book;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dorado.framework.crud.dao.impl.AbstractDAO;
+import com.dorado.framework.crud.service.AbstractService;
+import com.youshi.zebra.book.dao.BookDAO;
+import com.youshi.zebra.book.model.BookModel;
+
+/**
+ * 
+ * @author wangsch
+ * @date ${date}
+ */
+@Service
+public class ${service} extends AbstractService<Integer, ${model}>{
+	private static final Logger logger = LoggerFactory.getLogger(${service}.class);
+	
+	@Autowired
+	private ${dao} ${daoField};
+	
+	@Override
+	protected AbstractDAO<Integer, ${model}> dao() {
+		return ${daoField};
+	}
+}

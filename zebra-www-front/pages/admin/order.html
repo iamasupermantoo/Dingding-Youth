@@ -1,0 +1,75 @@
+<html>
+    <head>
+    	<title>鼎鼎少年</title>
+    	<meta charset="UTF-8">
+    	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    	<link rel="stylesheet" href="/src/css/common/reset.css">
+    	<link rel="stylesheet" href="/src/css/common/style-admin.css">
+    	<link rel="stylesheet" href="/src/css/admin/index.css">
+    	<script type="text/juicer" id="orderListTpl">
+    		{@if data.length === 0}
+    			<div class="order-list order-empty">抱歉！你还没有购买课程</div>
+    		{@/if} 
+			{@each data as item,index}
+			    <div class="order-list clearfix">
+					<p class="order-name">
+						<span>订单时间：@{item.createTime}</span>
+						<span class="float-right">¥<i class="price">@{item.price}</i>元</span>
+					</p>
+					<div class="order-info">
+						<p class="title"><img src="@{item.image.pattern}" width="102" height="130" alt="课程图片"></p>
+						<ul>
+							<li>课   @{item.course}</li>
+							<li>总课次：第@{item.totalCnt}节课</li>
+							<li>level ：@{item.level}</li>
+						</ul>
+						{@if item.payStatus !== 0}
+							<button class="pay-class disabled common-btn">已支付</button>
+						{@else if item.payStatus === 0}
+							<button data-id="@{item.cmId}" class="pay-class common-btn pay-trigger">未支付</button>
+						{@/if} 
+					</div>
+				</div>
+			{@/each}
+		</script>
+		<script type="text/juicer" id="userTpl">
+			<p>
+				<a href="/pages/admin/userinfo.html">
+					<img src="@{portraitUrl}" width="86" height="86" alt="头像">
+				</a>
+			</p>
+			<div class="username">@{username}</div>
+		</script>
+		<script type="text/juicer" id="payTpl">
+			<p class="title">请选择支付方式</p>
+			<div class="pay-type">
+				<ul class="clearfix">
+					<li><a data-id="@{id}" href="javascript:;"><img src="/src/img/admin/wechart.png" alt="微信支付"></a><span>微信支付</span></li>
+					<li><a data-id="@{id}" href="javascript:;"><img src="/src/img/admin/zhifubao.png" alt="支付宝支付"></a><span>支付宝支付</span></li>
+				</ul>
+			</div>
+		</script>
+    </head>
+	<body>
+		<!--#include file="/pages/common/header-admin.html"-->
+		<div class="container page-holder" >
+			<div class="holder">
+				<div class="holder-l">
+					<div class="portrait" id="portrait"></div>
+					<div class="sub-nav">
+						<ul>
+							<li><span></span><a href="/pages/admin/index.html"><i class="listen"></i>我的课表</a></li>
+							<li><span></span><a href="/pages/admin/course.html"><i class="course"></i>我的课程</a></li>
+							<li><span></span><a href="/pages/admin/test.html"><i class="test"></i>课前评测</a></li>
+							<li class="active"><span></span><a href="/pages/admin/order.html"><i class="order"></i>我的订单</a></li>
+						</ul>
+					</div>
+				</div>	
+				<div class="holder-r" id="orderList">
+					<p class="page-title"><span>我的订单</span></p>
+				</div>
+			</div>
+		</div>
+		<!--#include file="/pages/common/footer-admin.html"-->
+	</body>
+</html>

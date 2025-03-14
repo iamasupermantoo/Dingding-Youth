@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<title>Tables - Ace Admin</title>
+	<script src="/assets/js/jquery.min.js"></script>
+</head>
+
+<body class="no-skin">
+<button id="btn">点我</button>
+
+
+<div id="div">
+
+</div>
+
+</body>
+<script type="text/javascript">
+$('#btn').click(function() {
+	$.ajax({
+		url: '/course/admin/ajax/html',
+		type: 'get',
+		success: function(result, status, xhr) {
+			if(result) {
+				$('#div').html(result);
+				alert("ok");
+			} else {
+				alert(status);
+			}
+		}
+	});
+});
+
+
+</script>
+</html>

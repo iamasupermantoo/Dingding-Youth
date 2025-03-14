@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.youshi.zebra</groupId>
+		<artifactId>zebra-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>zebra-component</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>zebra-component</name>
+	<description>zebra-component</description>
+	
+	<dependencies>
+		
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org</groupId>
+		    <artifactId>jaudiotagger</artifactId>
+		    <version>2.0.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.8</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.31</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.lingala.zip4j</groupId>
+		    <artifactId>zip4j</artifactId>
+		    <version>1.3.2</version>
+		</dependency>
+		
+		<!-- swagger2 -->
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		</dependency>
+		
+		<!-- 微信公众平台Java SDK -->
+		<dependency>
+			<groupId>com.github.liyiorg</groupId>
+			<artifactId>weixin-popular</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+		
+		<!-- zebra框架 -->
+        <dependency>
+            <groupId>com.youshi.zebra</groupId>
+            <artifactId>zebra-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.youshi.zebra</groupId>
+            <artifactId>zebra-mvc-support</artifactId>
+        </dependency>
+        
+        <dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<scope>provided</scope>
+		</dependency>
+        
+        <!-- zebra业务 -->
+        <dependency>
+            <groupId>com.youshi.zebra</groupId>
+            <artifactId>zebra-push-component</artifactId>
+        </dependency>
+        
+        
+        <!-- 阿里云sdk -->
+        <dependency>
+			<groupId>com.aliyun.oss</groupId>
+			<artifactId>aliyun-sdk-oss</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>com.aliyun</groupId>
+		    <artifactId>aliyun-java-sdk-ram</artifactId>
+		    <version>2.0.7</version>
+		</dependency>
+		<dependency>
+		  <groupId>com.aliyun</groupId>
+		  <artifactId>aliyun-java-sdk-sts</artifactId>
+		</dependency>
+		<dependency>
+		  <groupId>com.aliyun</groupId>
+		  <artifactId>aliyun-java-sdk-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>alipay-sdk</artifactId>
+		</dependency>
+		
+		<!-- image magick -->
+		<dependency>
+			<groupId>jmagick</groupId>
+			<artifactId>jmagick</artifactId>
+		</dependency>
+	</dependencies>
+</project>

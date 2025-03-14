@@ -1,0 +1,17 @@
+package ${package}.model;
+
+import com.dorado.framework.crud.model.impl.AbstractModel;
+
+/**
+ * 
+ * 
+ * @author wangsch
+ * @date ${date}
+ */
+public class ${model} extends AbstractModel<Integer>{
+
+	public ${model}(Integer id, String data, long createTime, int status) {
+		super(id, data, createTime, status);
+	}
+	
+}
